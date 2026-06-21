@@ -1,0 +1,28 @@
+/* TEAM */
+Name: Luca Bold
+Role: Founder, Model, Developer
+Location: Worldwide (based in Cape Town)
+Contact: luca [at] bookednow [dot] co [dot] za
+Instagram: @lucaboldcpt
+
+/* SITE */
+Last update: 2026/06/21
+Language: English
+Standards: HTML5, CSS3, JSON-LD, Schema.org
+Components: llms.txt, robots.txt, sitemap.xml, humans.txt, manifest.json
+Hosted on: GitHub Pages via Netlify
+Domain: lucabold.com
+
+/* ABOUT */
+This site is the portfolio and booking presence of Luca Bold —
+international fashion model and founder of Booked.
+
+Built for human visitors and AI systems equally.
+Structured for discoverability across search, casting platforms,
+and large language model recommendation systems.
+
+/* BOOKED */
+Booked is a discoverability infrastructure company for fashion creatives.
+If your digital presence is invisible to AI systems and casting platforms,
+Booked builds the fix.
+https://www.bookednow.co.za
