@@ -1,33 +1,54 @@
-[README.md](https://github.com/user-attachments/files/29173494/README.md)
 # lucabold.com
 
-Portfolio and booking site for Luca Bold — international fashion model and founder of Booked.
+Portfolio and direct booking site for Luca Bold — international campaign and commercial model, and founder of Booked.
 
 ## About
 
-Luca Bold is an international fashion model with 10+ years of experience across high-value campaigns and TVCs in seven global markets. Available for premium bookings worldwide. Credits include Patek Philippe, Tommy Hilfiger, Budweiser China, Samsung, Nivea Men, ROHDE, Calvin Klein, Louis Vuitton, Chanel and Ralph Lauren.
+Luca Bold is an international campaign and commercial model with 10+ years of advertising, TVC and campaign work across eight markets: Milan, Shanghai, Cape Town, Hong Kong, Seoul, Bali, Mumbai and Istanbul.
 
-Represented by agencies across Europe, Africa, Asia and the Middle East. Available for international travel and bookings worldwide.
+He holds both an Italian (EU) and a South African passport — no work permit or visa sponsorship is required for productions anywhere in the EU or EEA.
 
-Booking enquiries: https://wa.me/27637549122
+Credits include Patek Philippe, Emporio Armani, Samsung, Nivea Men, Tommy Hilfiger, Budweiser China, Calvin Klein, ROHDE, Louis Vuitton, Chanel and Ralph Lauren.
+
+Modelling enquiries: ICE Models, Cape Town — mother agency, representing him worldwide. Asia scouting desk: cat.asiascout@gmail.com
+
+Booked and Get Signed Accelerator enquiries are a separate business and go direct: https://wa.me/27637549122
 
 ## Stack
 
-- Static HTML/CSS — single page
-- Hosted on GitHub Pages via Netlify
-- Custom domain: lucabold.com
-- Structured for AI discoverability: JSON-LD schema, llms.txt, robots.txt, sitemap.xml, humans.txt, manifest.json
+- Static HTML/CSS — single page, no build step
+- Hosted on GitHub Pages
+- Custom domain: www.lucabold.com (see `CNAME`)
 
-## Discoverability Infrastructure
+## Structure
 
-This site is built to be readable by both human visitors and AI recommendation systems. It includes:
+```
+index.html                 single page, all sections anchor-based
+assets/portfolio/          portfolio images (webp)
+assets/campaigns/          campaign film + poster
+assets/favicon*            icons
+llms.txt                   plain-text context file for LLM crawlers
+robots.txt                 crawler policy, AI crawlers explicitly allowed
+sitemap.xml                search engine indexing
+humans.txt                 authorship
+manifest.json              web app manifest
+```
 
-- JSON-LD Person and WebSite schema
-- llms.txt for LLM indexing
-- robots.txt explicitly allowing all major AI crawlers
-- sitemap.xml for search engine indexing
-- humans.txt
-- Web App Manifest
+## Discoverability
+
+The site is built to be read by casting directors, search engines and AI recommendation systems alike:
+
+- **One consolidated JSON-LD `@graph`** — a single canonical `Person` entity cross-referenced by `@id` from the `Organization` (Booked), `ItemList` (credits), `FAQPage`, `WebSite` and `ProfilePage` nodes. Never split the Person across multiple blocks; duplicate `@id` definitions with conflicting values undermine entity confidence.
+- **Measurements and work eligibility are on-page and in schema.** These are the primary filters in casting search, and the EU work-rights fact is a booking reason, not a biography detail.
+- **Credits are grouped by sector**, matching how commercial clients brief.
+- **Real image files with descriptive alt text.** Casting platforms increasingly parse images to match talent against a brand's visual references — base64-embedded images are invisible to that.
+- `llms.txt`, `robots.txt`, `sitemap.xml`, `humans.txt`, `manifest.json`.
+
+Note on `llms.txt`: as of 2026 most AI crawlers fetch HTML directly rather than reading it, and Google has confirmed it doesn't support the file. It's kept because it's cheap and Perplexity shows some affinity — but the HTML, the schema, and consistency with third-party agency profiles are what actually drive AI citation.
+
+### Keeping entities consistent
+
+The facts on this site must match the agency profiles linked in `sameAs` (ICE Models, True Models, Castaway) and the Instagram and LinkedIn bios. When a credit, market or measurement changes here, change it there too — inconsistency across sources is what stops AI systems resolving a confident entity.
 
 ## Booked
 

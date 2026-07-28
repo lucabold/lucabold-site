@@ -1,5 +1,5 @@
 # robots.txt — lucabold.com
-# Last updated: June 2026
+# Last updated: July 2026
 
 # Allow all crawlers full access by default
 User-agent: *
@@ -50,6 +50,11 @@ Allow: /
 
 User-agent: Bytespider
 Allow: /
+
+# Stray upload folder — blocked so the duplicate index.html is not indexed.
+# Safe to remove this rule once the folder is deleted from the repo.
+User-agent: *
+Disallow: /lucabold-upload/
 
 # Sitemap
 Sitemap: https://www.lucabold.com/sitemap.xml
