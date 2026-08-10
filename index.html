@@ -2122,6 +2122,17 @@ footer {
   font-size: 0.625rem; letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--gold);
 }
+
+/* Anchor targets must clear the fixed nav, otherwise every nav link
+   lands with the section heading hidden behind the bar. */
+section[id], footer[id] { scroll-margin-top: 104px; }
+@media (max-width: 600px) { section[id], footer[id] { scroll-margin-top: 88px; } }
+
+/* The gallery mixes single and double-width cards. Without dense packing a
+   double-width card that cannot fit the remaining column wraps and leaves a
+   hole behind it. */
+.portfolio-grid { grid-auto-flow: dense; }
+#portfolio .portfolio-grid { grid-auto-flow: dense !important; }
 </style>
 <link href="assets/favicon.ico" rel="icon" sizes="any"/>
 <link href="assets/favicon-lb.png" rel="icon" type="image/png"/>
