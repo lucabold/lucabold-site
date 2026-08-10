@@ -4,7 +4,7 @@
   <!-- Homepage (single-page site — all sections anchor-based) -->
   <url>
     <loc>https://www.lucabold.com/</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,7 +12,7 @@
   <!-- AI and machine-readable files -->
   <url>
     <loc>https://www.lucabold.com/llms.txt</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

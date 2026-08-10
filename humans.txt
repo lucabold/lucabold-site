@@ -1,12 +1,12 @@
 /* TEAM */
 Name: Luca Bold
 Role: International campaign & commercial model. Founder of Booked.
-Location: Worldwide (based in Cape Town)
+Location: Cape Town, South Africa — October 2026 to February 2027
 Contact: luca [at] bookednow [dot] co [dot] za
 Instagram: @lucaboldcpt
 
 /* SITE */
-Last update: 2026/07/27
+Last update: 2026/08/10
 Language: English
 Standards: HTML5, CSS3, JSON-LD, Schema.org
 Components: llms.txt, robots.txt, sitemap.xml, humans.txt, manifest.json
