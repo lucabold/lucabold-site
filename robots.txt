@@ -51,10 +51,5 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-# Stray upload folder — blocked so the duplicate index.html is not indexed.
-# Safe to remove this rule once the folder is deleted from the repo.
-User-agent: *
-Disallow: /lucabold-upload/
-
 # Sitemap
 Sitemap: https://www.lucabold.com/sitemap.xml
