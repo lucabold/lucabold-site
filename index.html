@@ -2116,6 +2116,12 @@ footer {
   .availability-band { padding: 56px 20px; }
   .availability-copy { font-size: 1rem; line-height: 1.9; }
 }
+
+.portfolio-credit {
+  margin-top: 10px;
+  font-size: 0.625rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gold);
+}
 </style>
 <link href="assets/favicon.ico" rel="icon" sizes="any"/>
 <link href="assets/favicon-lb.png" rel="icon" type="image/png"/>
@@ -2271,6 +2277,11 @@ footer {
           "@type": "Organization",
           "name": "What Models",
           "description": "Representation — Shanghai"
+        },
+        {
+          "@type": "Organization",
+          "name": "Primo Model Management",
+          "description": "Representation — Hong Kong"
         },
         {
           "@type": "Organization",
@@ -2529,6 +2540,29 @@ footer {
           "position": 9,
           "item": {
             "@type": "CreativeWork",
+            "name": "Forbes Magazine Korea — Editorial",
+            "description": "Fashion editorial for Forbes Magazine, South Korea, 2018.",
+            "contributor": {
+              "@id": "https://www.lucabold.com/#luca-bold"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Forbes"
+            },
+            "genre": "Editorial",
+            "about": "Editorial and press",
+            "datePublished": "2018",
+            "locationCreated": {
+              "@type": "Country",
+              "name": "South Korea"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "item": {
+            "@type": "CreativeWork",
             "name": "Vogue — Runway",
             "description": "Runway appearance for Vogue.",
             "contributor": {
@@ -2544,7 +2578,7 @@ footer {
         },
         {
           "@type": "ListItem",
-          "position": 10,
+          "position": 11,
           "item": {
             "@type": "CreativeWork",
             "name": "Louis Vuitton — Brand Event",
@@ -2562,7 +2596,7 @@ footer {
         },
         {
           "@type": "ListItem",
-          "position": 11,
+          "position": 12,
           "item": {
             "@type": "CreativeWork",
             "name": "Chanel — Brand Event",
@@ -2580,7 +2614,7 @@ footer {
         },
         {
           "@type": "ListItem",
-          "position": 12,
+          "position": 13,
           "item": {
             "@type": "CreativeWork",
             "name": "Ralph Lauren — Brand Activation",
@@ -2750,7 +2784,7 @@ document.documentElement.classList.add('js');
 </div>
 </div>
 <div class="hero-right">
-<img alt="Luca Bold — international campaign and commercial model, portrait on location" fetchpriority="high" height="1800" loading="eager" src="assets/portfolio/luca-bold-campaign-model-portrait-hero.webp" width="1202"/>
+<img alt="Luca Bold — international campaign and commercial model, black and white portrait" fetchpriority="high" height="1416" loading="eager" src="assets/portfolio/luca-bold-portrait-black-and-white.webp" width="948"/>
 </div>
 <div aria-hidden="true" class="scroll-hint">
 <div class="scroll-line"></div>
@@ -2810,8 +2844,9 @@ document.documentElement.classList.add('js');
 <div class="sector-row"><dt>Technology</dt><dd>Samsung — TVC</dd></div>
 <div class="sector-row"><dt>Grooming &amp; skincare</dt><dd>Nivea Men — campaign film</dd></div>
 <div class="sector-row"><dt>Beverage</dt><dd>Budweiser China — TVC campaign</dd></div>
-<div class="sector-row"><dt>Fashion &amp; apparel</dt><dd>Tommy Hilfiger — outdoor campaign · Calvin Klein — e-commerce · Emporio Armani — runway, Milan · Vogue — runway</dd></div>
+<div class="sector-row"><dt>Fashion &amp; apparel</dt><dd>Tommy Hilfiger — outdoor campaign · Calvin Klein — e-commerce · Emporio Armani — runway, Milan</dd></div>
 <div class="sector-row"><dt>Footwear</dt><dd>ROHDE — European campaign</dd></div>
+<div class="sector-row"><dt>Editorial &amp; press</dt><dd>Forbes Magazine — South Korea, 2018 · Vogue — runway</dd></div>
 <div class="sector-row"><dt>Luxury brand events</dt><dd>Louis Vuitton · Chanel · Ralph Lauren</dd></div>
 </dl>
 <p class="sector-note">Currently building toward automotive, corporate and financial lifestyle, and premium travel and hospitality.</p>
@@ -2872,6 +2907,16 @@ document.documentElement.classList.add('js');
 <p>A tighter image edit for casting, brand review and international model positioning — focused on commercial proof, runway credibility and stronger portrait reads.</p>
 </div>
 <div aria-label="Selected modelling portfolio images" class="portfolio-grid">
+<figure class="portfolio-card proof-image" data-credit="Forbes Korea, 2018">
+<img alt="Luca Bold in a shearling coat seated on a Maserati — editorial for Forbes Magazine, South Korea, 2018" decoding="async" height="1416" loading="lazy" src="assets/portfolio/luca-bold-forbes-korea-2018-editorial.webp" width="1072"/>
+<figcaption class="portfolio-credit">Forbes Magazine — South Korea, 2018</figcaption>
+</figure>
+<figure class="portfolio-card proof-image" data-credit="Tailoring">
+<img alt="Luca Bold full length in a three-piece black tie tuxedo — tailoring and formalwear" decoding="async" height="1414" loading="lazy" src="assets/portfolio/luca-bold-black-tie-tailoring-full-length.webp" width="1076"/>
+</figure>
+<figure class="portfolio-card">
+<img alt="Luca Bold on location, portrait in a white shirt" decoding="async" height="1800" loading="lazy" src="assets/portfolio/luca-bold-campaign-model-portrait-hero.webp" width="1202"/>
+</figure>
 <figure class="portfolio-card feature-wide proof-image" data-credit="Budweiser China Campaign">
 <img alt="Budweiser China campaign image featuring Luca Bold" decoding="async" loading="lazy" src="assets/portfolio/budweiser-china-campaign-luca-bold.webp" width="1280" height="719"/>
 </figure>
@@ -2931,7 +2976,7 @@ document.documentElement.classList.add('js');
 <div class="stat-label">Credits</div>
 </div>
 <div class="stat-box" role="listitem">
-<div class="stat-number">6</div>
+<div class="stat-number">7</div>
 <div class="stat-label">Agencies</div>
 </div>
 </div>
@@ -2985,6 +3030,11 @@ document.documentElement.classList.add('js');
 <div class="agency-city">Istanbul</div>
 <div class="agency-cta">View Profile →</div>
 </a>
+<div class="agency-item" role="listitem">
+<div class="agency-name">Primo Management</div>
+<div class="agency-city">Hong Kong</div>
+<div class="agency-cta muted">Representation</div>
+</div>
 <div class="agency-item" role="listitem">
 <div class="agency-name">INEGA</div>
 <div class="agency-city">Mumbai</div>
