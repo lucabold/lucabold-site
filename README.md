@@ -10,7 +10,7 @@ He holds both an Italian (EU) and a South African passport — no work permit or
 
 Credits include Patek Philippe, Emporio Armani, Samsung, Nivea Men, Tommy Hilfiger, Budweiser China, Calvin Klein, ROHDE, Louis Vuitton, Chanel and Ralph Lauren.
 
-Modelling enquiries: ICE Models, Cape Town — mother agency, representing him worldwide. Booking agent: Raymond Weston, raymond@icemodels.co.za
+Modelling enquiries: ICE Models, Cape Town — mother agency, representing him worldwide. Booking agent: Raymond Weston, raymond@icemodels.co.za. Asia scouting desk: Cat, cat.asiascout@gmail.com
 
 Booked and Get Signed Accelerator enquiries are a separate business and go direct: https://wa.me/27637549122
 
