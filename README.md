@@ -6,9 +6,13 @@ Portfolio and direct booking site for Luca Bold — international campaign and c
 
 Luca Bold is an international campaign and commercial model with 10+ years of advertising, TVC and campaign work across eight markets: Milan, Shanghai, Cape Town, Hong Kong, Seoul, Bali, Mumbai and Istanbul.
 
+**Availability:** Romania 9–30 September 2026, then Cape Town October 2026 – February 2027.
+
 He holds both an Italian (EU) and a South African passport — no work permit or visa sponsorship is required for productions anywhere in the EU or EEA.
 
-Credits include Patek Philippe, Emporio Armani, Samsung, Nivea Men, Tommy Hilfiger, Budweiser China, Calvin Klein, ROHDE, Louis Vuitton, Chanel and Ralph Lauren.
+Credits include Patek Philippe (Cubitus Collection launch), Chopard, Louis Philippe India, GANT, Emporio Armani, Samsung, Nivea Men, Tommy Hilfiger, Budweiser China, Helly Hansen, Calvin Klein, ROHDE, Louis Vuitton, Chanel and Ralph Lauren.
+
+Current representation is ICE Models Cape Town (mother agency), What Models Shanghai, Primo Hong Kong, Castaway Bali, INEGA Mumbai and True Models Istanbul. Next Management Milan (2017) is previous representation, not current.
 
 Modelling enquiries: ICE Models, Cape Town — mother agency, representing him worldwide. Booking agent: Raymond Weston, raymond@icemodels.co.za. Asia scouting desk: Cat, cat.asiascout@gmail.com
 
