@@ -2133,6 +2133,37 @@ section[id], footer[id] { scroll-margin-top: 104px; }
    hole behind it. */
 .portfolio-grid { grid-auto-flow: dense; }
 #portfolio .portfolio-grid { grid-auto-flow: dense !important; }
+
+/* Touch targets — inline links in the booking desk and FAQ render at ~21px,
+   below the 44px minimum. Pad the hit area on touch-sized viewports. */
+@media (max-width: 900px) {
+  .booking-desk-value a,
+  .faq-item a,
+  .agency-cta,
+  .nav-logo {
+    display: inline-block;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .booking-desk-value { line-height: 1.4; }
+
+  /* the menu button is the single most-tapped control on a phone */
+  .nav-hamburger {
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    margin-right: -10px;
+  }
+
+  .footer-links a {
+    display: inline-block;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .nav-logo { padding-top: 12px; padding-bottom: 12px; margin-top: -6px; margin-bottom: -6px; }
+}
 </style>
 <link href="assets/favicon.ico" rel="icon" sizes="any"/>
 <link href="assets/favicon-lb.png" rel="icon" type="image/png"/>
@@ -2945,7 +2976,7 @@ document.documentElement.classList.add('js');
 <section aria-labelledby="availability-heading" class="availability-band reveal" id="availability">
 <div class="availability-inner">
 <p class="availability-kicker" id="availability-heading">Currently booking</p>
-<h2 class="availability-title">Romania <em>9–30 September 2026</em><br/>then Cape Town <em>October 2026 — February 2027</em></h2>
+<h2 class="availability-title">Romania <em>9–30&nbsp;September&nbsp;2026</em><br/>then Cape Town <em>October&nbsp;2026 — February&nbsp;2027</em></h2>
 <p class="availability-copy">In Romania from 9 to 30 September 2026 — available for bookings in Bucharest, Transylvania and across the country, with EU work rights and no permit required. Then based in Cape Town for the full Southern Hemisphere production season. <strong>Local hire for any production shooting in the Western Cape</strong> — no flights, no accommodation, no per diems. Italian (EU) and South African passports, so international productions carry no permit or visa lead time either.</p>
 <p class="availability-copy">Available for campaign stills, TVC and campaign film. Particularly suited to automotive, luxury watch, grooming, technology and corporate lifestyle briefs.</p>
 <a class="btn" href="#booking">
