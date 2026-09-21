@@ -1,0 +1,560 @@
+/* ==========================================================================
+   presence.css — shared stylesheet for the /presence/ section of lucabold.com
+   --------------------------------------------------------------------------
+   Tokens, type scale and component rules are lifted verbatim from the inline
+   <style> block in index.html so the Presence pages read as the same site.
+   index.html is deliberately NOT modified and does not load this file.
+   ========================================================================== */
+
+:root {
+  --black: #080808;
+  --black-soft: #111111;
+  --black-mid: #1a1a1a;
+  --border: rgba(255,255,255,0.07);
+  --border-gold: rgba(201,169,110,0.25);
+  --cream: #e8e2d5;
+  --cream-dim: rgba(232,226,213,0.55);
+  --cream-faint: rgba(232,226,213,0.1);
+  --gold: #c9a96e;
+  --gold-dim: rgba(201,169,110,0.15);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--cream);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--gold-dim); color: var(--cream); }
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--black-mid);
+  color: var(--cream);
+  padding: 14px 22px;
+  font-size: 0.6875rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  z-index: 100;
+}
+.skip-link:focus { left: 0; }
+
+/* --------------------------------------------------------------- MASTHEAD */
+.p-masthead {
+  padding: 34px 48px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.p-wordmark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: var(--cream);
+  text-decoration: none;
+}
+
+.p-masthead-note {
+  font-size: 0.625rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ------------------------------------------------------------ BREADCRUMBS */
+.p-breadcrumb {
+  padding: 22px 48px 0;
+  font-size: 0.625rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+}
+.p-breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
+.p-breadcrumb li + li::before { content: '/'; color: var(--cream-faint); margin-right: 10px; }
+.p-breadcrumb a {
+  color: var(--cream-dim);
+  text-decoration: none;
+  transition: color 0.3s;
+  display: inline-block;
+  padding: 6px 0; /* keeps the hit area at or above the 24px minimum */
+}
+.p-breadcrumb a:hover { color: var(--gold); }
+
+/* --------------------------------------------------------------- SECTIONS */
+.section {
+  padding: 100px 48px;
+  border-top: 1px solid var(--border);
+}
+.section:first-of-type { border-top: none; }
+
+/* The section heading. Rendered as an h2 on Presence pages so the document
+   outline is h1 > h2 > h3 > h4 with no skipped levels, while keeping the
+   small gold label look the rest of the site uses. */
+.section-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.625rem;
+  font-weight: 400;
+  letter-spacing: 0.4em;
+  line-height: 1.6;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 48px;
+}
+
+.p-measure { max-width: 860px; }
+
+/* ------------------------------------------------------------------- HERO */
+.p-hero { padding: 80px 48px 90px; }
+
+.p-hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: var(--cream);
+  max-width: 18ch;
+  margin-bottom: 34px;
+}
+.p-hero h1 em { font-style: italic; color: var(--gold); }
+
+/* The direct answer. Kept first in source order and visually distinct so a
+   retrieval model lifts it cleanly. */
+.p-answer {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--cream);
+  max-width: 62ch;
+  padding-left: 22px;
+  border-left: 1px solid var(--border-gold);
+  margin-bottom: 40px;
+}
+
+.p-standfirst {
+  font-size: 0.8125rem;
+  line-height: 1.9;
+  color: var(--cream-dim);
+  max-width: 68ch;
+}
+
+/* --------------------------------------------------------------- TYPE/BODY */
+.p-body h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--cream);
+  margin: 56px 0 20px;
+}
+.p-body h3 em { font-style: italic; color: var(--gold); }
+
+.p-body h4 {
+  font-size: 0.6875rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 38px 0 14px;
+}
+
+.p-body > *:first-child { margin-top: 0; }
+
+.p-body p {
+  font-size: 0.8125rem;
+  line-height: 1.9;
+  color: var(--cream-dim);
+  margin-bottom: 18px;
+  max-width: 68ch;
+}
+
+.p-body strong { color: var(--cream); font-weight: 400; }
+.p-body em { font-style: italic; }
+
+.p-body a {
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-gold);
+  transition: color 0.3s;
+}
+.p-body a:hover { color: var(--cream); }
+
+.p-body ul, .p-body ol {
+  margin: 0 0 22px 0;
+  padding-left: 20px;
+  max-width: 68ch;
+}
+.p-body li {
+  font-size: 0.8125rem;
+  line-height: 1.9;
+  color: var(--cream-dim);
+  margin-bottom: 10px;
+}
+.p-body li::marker { color: var(--gold); }
+
+.p-callout {
+  border: 1px solid var(--border);
+  border-left: 1px solid var(--border-gold);
+  padding: 26px 28px;
+  margin: 34px 0;
+  max-width: 68ch;
+  background: var(--black-soft);
+}
+.p-callout p:last-child { margin-bottom: 0; }
+
+/* A labelled specimen. Never a client, never a result. */
+.p-specimen { border-left-color: var(--cream-faint); }
+.p-specimen-label {
+  font-size: 0.5625rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  margin-bottom: 14px;
+}
+
+/* ------------------------------------------------------------------ CREDS */
+.p-cred {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 30px 0;
+  margin: 42px 0;
+  max-width: 68ch;
+}
+.p-cred p { margin-bottom: 0; }
+
+/* ------------------------------------------------------------------ TABLE */
+.p-table { width: 100%; border-collapse: collapse; margin: 28px 0; max-width: 68ch; }
+.p-table caption {
+  text-align: left;
+  font-size: 0.625rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding-bottom: 16px;
+}
+.p-table th, .p-table td {
+  text-align: left;
+  padding: 16px 16px 16px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  color: var(--cream-dim);
+  vertical-align: top;
+}
+.p-table th {
+  color: var(--cream);
+  font-weight: 400;
+  font-size: 0.625rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.p-table td:first-child { color: var(--cream); }
+
+/* ------------------------------------------------------------------- TIERS */
+.p-tiers { list-style: none; padding: 0; max-width: 68ch; border-top: 1px solid var(--border); }
+.p-tier {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+}
+.p-tier-name { color: var(--cream); font-size: 0.8125rem; line-height: 1.7; }
+.p-tier-name span { display: block; color: var(--cream-dim); margin-top: 6px; }
+.p-tier-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------- FAQ */
+.faq-list { border-top: 1px solid var(--border); max-width: 860px; }
+.faq-item { padding: 26px 0; border-bottom: 1px solid var(--border); }
+.faq-item h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-weight: 300;
+  color: var(--cream);
+  margin-bottom: 12px;
+}
+.faq-item p { font-size: 0.8125rem; line-height: 1.9; color: var(--cream-dim); margin-bottom: 14px; }
+.faq-item p:last-child { margin-bottom: 0; }
+.faq-item a { color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--border-gold); }
+.faq-item a:hover { color: var(--cream); }
+
+/* ------------------------------------------------------------------ BUTTON */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 15px 30px;
+  border: 1px solid var(--border-gold);
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 0.6875rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+  min-height: 48px;
+}
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gold-dim);
+  transform: translateX(-100%);
+  transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+.btn:hover::before { transform: translateX(0); }
+.btn:hover { border-color: var(--gold); }
+.btn span { position: relative; }
+.btn-arrow { position: relative; transition: transform 0.3s; }
+.btn:hover .btn-arrow { transform: translateX(4px); }
+.btn[disabled] { opacity: 0.4; cursor: not-allowed; }
+.btn[disabled]:hover::before { transform: translateX(-100%); }
+
+.p-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 44px; }
+
+/* --------------------------------------------------------- NEXT / FOOTER */
+.p-next { list-style: none; padding: 0; max-width: 860px; border-top: 1px solid var(--border); }
+.p-next li { border-bottom: 1px solid var(--border); }
+.p-next a {
+  display: block;
+  padding: 24px 0;
+  text-decoration: none;
+  border: none;
+  transition: color 0.3s;
+}
+.p-next a:hover .p-next-q { color: var(--gold); }
+.p-next-q {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: var(--cream);
+  margin-bottom: 8px;
+  transition: color 0.3s;
+}
+.p-next-d { display: block; font-size: 0.75rem; line-height: 1.8; color: var(--cream-dim); }
+
+footer {
+  padding: 56px 48px;
+  border-top: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 32px;
+}
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.75rem;
+  font-weight: 300;
+  color: var(--cream);
+  letter-spacing: 0.1em;
+}
+.footer-links { display: flex; gap: 28px; list-style: none; justify-content: center; flex-wrap: wrap; }
+.footer-links a {
+  font-size: 0.625rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  text-decoration: none;
+  transition: color 0.3s;
+  display: inline-block;
+  padding: 7px 0; /* keeps the hit area at or above the 24px minimum */
+}
+.footer-links a:hover { color: var(--cream); }
+.footer-copy { font-size: 0.6875rem; line-height: 1.6; color: var(--cream-dim); text-align: right; }
+
+/* ------------------------------------------------------------- EMBED SLOTS */
+.p-embed {
+  border: 1px solid var(--border);
+  padding: 30px 28px;
+  margin: 34px 0;
+  max-width: 68ch;
+  background: var(--black-soft);
+}
+.p-embed p { margin-bottom: 14px; }
+.p-embed p:last-child { margin-bottom: 0; }
+
+/* ------------------------------------------------------------- DIAGNOSTIC */
+.dx { max-width: 720px; }
+
+.dx-progress {
+  font-size: 0.625rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 28px;
+}
+
+.dx-track { height: 1px; background: var(--border); margin-bottom: 44px; }
+.dx-bar { height: 1px; background: var(--gold); width: 0; transition: width 0.4s cubic-bezier(0.16,1,0.3,1); }
+
+.dx-area {
+  font-size: 0.5625rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  margin-bottom: 16px;
+}
+
+.dx-q {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.375rem, 3vw, 1.875rem);
+  font-weight: 300;
+  line-height: 1.25;
+  color: var(--cream);
+  margin-bottom: 34px;
+}
+
+.dx-options { border: 0; padding: 0; margin: 0 0 36px; }
+.dx-options legend {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.dx-opt { display: block; border-bottom: 1px solid var(--border); }
+.dx-opt:first-child { border-top: 1px solid var(--border); }
+
+.dx-opt label {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 8px;
+  font-size: 0.8125rem;
+  line-height: 1.8;
+  color: var(--cream-dim);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  min-height: 48px;
+}
+.dx-opt label:hover { background: var(--black-soft); color: var(--cream); }
+.dx-opt input { margin-top: 6px; accent-color: var(--gold); width: 16px; height: 16px; flex: none; }
+.dx-opt input:checked + span { color: var(--cream); }
+
+.dx-nav { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* Result */
+.dx-band {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--cream);
+  margin-bottom: 18px;
+}
+.dx-band em { font-style: italic; color: var(--gold); }
+
+.dx-score {
+  font-size: 0.625rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 26px;
+}
+
+.dx-breakdown { list-style: none; padding: 0; border-top: 1px solid var(--border); margin: 34px 0; }
+.dx-breakdown li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--cream-dim);
+}
+.dx-breakdown b { color: var(--cream); font-weight: 400; font-family: 'Cormorant Garamond', serif; font-size: 1rem; }
+
+.dx-fix { border-top: 1px solid var(--border); padding: 30px 0; }
+.dx-fix h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: var(--cream);
+  margin-bottom: 6px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.dx-fix .dx-fix-area {
+  font-size: 0.5625rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.dx-fix p { font-size: 0.8125rem; line-height: 1.9; color: var(--cream-dim); margin-bottom: 14px; }
+.dx-fix p:last-child { margin-bottom: 0; }
+
+.dx-error {
+  font-size: 0.75rem;
+  line-height: 1.8;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+[hidden] { display: none !important; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ------------------------------------------------------------- RESPONSIVE */
+@media (max-width: 900px) {
+  footer { grid-template-columns: 1fr; text-align: center; }
+  .footer-copy { text-align: center; }
+  .footer-links { justify-content: center; }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 64px 22px; }
+  .p-hero { padding: 48px 22px 56px; }
+  .p-masthead { padding: 24px 22px; }
+  .p-breadcrumb { padding: 18px 22px 0; }
+  footer { padding: 44px 22px; }
+  .p-answer { padding-left: 16px; }
+  .p-tier { flex-direction: column; gap: 10px; }
+  .p-table, .p-table caption, .p-table tbody, .p-table tr, .p-table td, .p-table th { display: block; width: 100%; }
+  .p-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .p-table tr { border-bottom: 1px solid var(--border); padding: 14px 0; }
+  .p-table td { border: none; padding: 4px 0; }
+  .p-table td:first-child { color: var(--cream); padding-bottom: 8px; }
+  .dx-breakdown li { flex-direction: column; gap: 6px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
