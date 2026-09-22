@@ -2291,6 +2291,21 @@ section[id], footer[id] { scroll-margin-top: 104px; }
     max-width: none !important;
   }
 }
+
+/* ---- CREDENTIALS CARDS: remove the dead space on mobile ---- */
+/* Each card was pinned to min-height 170px around 65-85px of content, so
+   three of the four carried ~33px of empty space and the four-card grid ran
+   683px on a 375px screen. Let the content and padding set the height. */
+@media (max-width: 600px) {
+  .tier1-item {
+    min-height: 0 !important;
+    padding: 30px 28px !important;
+  }
+
+  .tier1-brand {
+    margin-bottom: 8px !important;
+  }
+}
 </style>
 <link href="assets/favicon.ico" rel="icon" sizes="any"/>
 <link href="assets/favicon-lb.png" rel="icon" type="image/png"/>
