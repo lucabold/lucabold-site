@@ -1854,7 +1854,6 @@ footer {
     line-height: 1.12 !important;
   }
 
-  .tier1-type,
   .ticker-item,
   .stat-label,
   .agency-city,
@@ -2170,6 +2169,64 @@ section[id], footer[id] { scroll-margin-top: 104px; }
   }
 
   .nav-logo { padding-top: 12px; padding-bottom: 12px; margin-top: -6px; margin-bottom: -6px; }
+}
+
+/* ---- TYPOGRAPHY PASS: measure, desktop prose size, note scale, credit case ---- */
+
+/* 1. Measure. Nothing on the page had a max-width, so prose ran 107-192 chars
+      per line on a wide screen. 68ch lands inside the comfortable 45-75 band. */
+.availability-copy,
+.specs-body,
+.booking-lead,
+.faq-item p,
+.sector-row dd,
+.sector-note,
+.about-text p,
+.week-desc,
+.booking-note {
+  max-width: 68ch;
+}
+
+/* 2. Desktop and tablet prose was 13px while the same copy is 16px below 600px.
+      Lift it to 15px so prose is one size from 601px up. */
+@media (min-width: 601px) {
+  .availability-copy,
+  .specs-body,
+  .booking-lead,
+  .faq-item p,
+  .sector-row dd,
+  .booking-desk-value {
+    font-size: 0.9375rem;
+    line-height: 1.85;
+  }
+}
+
+/* 3. Secondary card note — was 11px at every width, including mobile. */
+.agency-note {
+  font-size: 0.75rem;
+}
+
+@media (max-width: 600px) {
+  .agency-note {
+    font-size: 0.875rem !important;
+    line-height: 1.6 !important;
+  }
+}
+
+/* 4. Credit type ran 53 characters of letter-spaced uppercase. Sentence case,
+      tighter tracking, keeps the gold and the scale. */
+.tier1-type {
+  text-transform: none;
+  letter-spacing: 0.08em;
+  font-size: 0.6875rem;
+}
+
+@media (max-width: 600px) {
+  .tier1-type {
+    text-transform: none !important;
+    letter-spacing: 0.08em !important;
+    font-size: 0.8125rem !important;
+  }
 }
 </style>
 <link href="assets/favicon.ico" rel="icon" sizes="any"/>
