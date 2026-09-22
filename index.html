@@ -2228,6 +2228,69 @@ section[id], footer[id] { scroll-margin-top: 104px; }
     font-size: 0.8125rem !important;
   }
 }
+
+/* ---- MOBILE PASS: nav scrim, prose leading, hero wrap ---- */
+
+/* 1. The nav scrim faded to transparent across the bottom 42% of its own
+      height, which is exactly where the logo and hamburger sit — content
+      scrolling under it showed through the controls. Hold the scrim opaque
+      past the controls and fade only in the last sliver. */
+@media (max-width: 900px) {
+  .site-nav {
+    background: linear-gradient(to bottom,
+      rgba(8,8,8,0.97) 0%,
+      rgba(8,8,8,0.95) 76%,
+      rgba(8,8,8,0.60) 90%,
+      rgba(8,8,8,0) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+/* 2. Leading should tighten as the measure narrows. Mobile prose sits at
+      about 42 characters per line, where 1.9 reads as drifting apart. */
+@media (max-width: 600px) {
+  .about-text p,
+  .positioning-copy p,
+  .portfolio-intro p,
+  .campaign-copy p,
+  .booked-inner p,
+  .accelerator-inner > p,
+  .week-desc,
+  .specs-body,
+  .faq-item p,
+  .booking-lead,
+  .availability-copy {
+    line-height: 1.6 !important;
+  }
+
+  /* Short list entries need tighter leading still, or each row reads as
+     several separate items. */
+  .sector-row dd,
+  .specs-row dd,
+  .booking-desk-value {
+    line-height: 1.5 !important;
+  }
+}
+
+/* 3. Three statements set in tracked uppercase were orphaning single words
+      onto their own lines. One block each, balanced. */
+.hero-desc-line {
+  display: block;
+  text-wrap: balance;
+}
+
+/* Same defect one line up: the kicker was orphaning "&" onto line one. */
+.hero-label {
+  text-wrap: balance;
+}
+
+@media (max-width: 600px) {
+  .hero-desc {
+    letter-spacing: 0.14em !important;
+    max-width: none !important;
+  }
+}
 </style>
 <link href="assets/favicon.ico" rel="icon" sizes="any"/>
 <link href="assets/favicon-lb.png" rel="icon" type="image/png"/>
@@ -3074,9 +3137,9 @@ document.documentElement.classList.add('js');
 <h1 class="hero-name">Luca<em>Bold.</em></h1>
 <div aria-hidden="true" class="hero-divider"></div>
 <div class="hero-desc">
-      Campaign · TVC · Commercial<br/>
-      10+ years across eight international markets<br/>
-      Italian (EU) &amp; South African passports — no work permit required
+<span class="hero-desc-line">Campaign · TVC · Commercial</span>
+<span class="hero-desc-line">10+ years across eight international markets</span>
+<span class="hero-desc-line">Italian (EU) &amp; South African passports — no work permit required</span>
     </div>
 <div aria-label="Markets" class="hero-markets">
       Cape Town — Hong Kong — Seoul — Milan<br/>Istanbul — Mumbai — Shanghai — Bali
