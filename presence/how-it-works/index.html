@@ -129,12 +129,16 @@
             "@type": "Offer",
             "name": "Founder Visual Audit",
             "description": "A written assessment of every public image of you, ranked by the damage each one is doing.",
+            "price": "1200",
+            "priceCurrency": "EUR",
             "availability": "https://schema.org/InStock"
           },
           {
             "@type": "Offer",
             "name": "The Build",
             "description": "A working wardrobe and image system built for a named set of upcoming situations.",
+            "price": "3500",
+            "priceCurrency": "EUR",
             "availability": "https://schema.org/InStock"
           },
           {
@@ -318,25 +322,26 @@
 <div class="p-body p-measure" aria-labelledby="tier-label">
 <ul class="p-tiers">
 <li class="p-tier"><span class="p-tier-name">Strategy session<span>Ninety minutes on one named upcoming situation, with a written follow-up within three working days. The right entry point if you have one thing coming up and want a second opinion on it.</span></span><span class="p-tier-price">&#8364;500</span></li>
-<li class="p-tier"><span class="p-tier-name">Founder Visual Audit<span>Every public image of you assessed as one set and ranked by what each is costing. Deck photo, site, press, conference footage, social. Written, about a week.</span></span><span class="p-tier-price">On application</span></li>
-<li class="p-tier"><span class="p-tier-name">The Build<span>A working wardrobe and image system built against a named set of upcoming situations. Full document, sourcing, alteration schedule, two calls and one revision.</span></span><span class="p-tier-price">On application</span></li>
+<li class="p-tier"><span class="p-tier-name">Founder Visual Audit<span>Every public image of you assessed as one set and ranked by what each is costing. Deck photo, site, press, conference footage, social. Written, about a week.</span></span><span class="p-tier-price">&#8364;1,200</span></li>
+<li class="p-tier"><span class="p-tier-name">The Build<span>A working wardrobe and image system built against a named set of upcoming situations. Full document, sourcing, alteration schedule, two calls and one revision.</span></span><span class="p-tier-price">&#8364;3,500</span></li>
 <li class="p-tier"><span class="p-tier-name">Three-month engagement<span>Continuous advisory across a raise, a launch or a leadership transition, with availability between scheduled reviews.</span></span><span class="p-tier-price">On application</span></li>
 <li class="p-tier"><span class="p-tier-name">Retainer<span>Ongoing, for founders and operators with a recurring public schedule.</span></span><span class="p-tier-price">On application</span></li>
 </ul>
-<p>Everything above the strategy session is quoted against your actual situation, because the work genuinely differs. Send the ninety-day list with an <a href="/presence/enquire/">enquiry</a> and a fixed quote follows.</p>
+<p>The three-month engagement and the retainer are quoted against your actual situation, because the work genuinely differs. Send the ninety-day list with an <a href="/presence/enquire/">enquiry</a> and a fixed quote follows.</p>
 
 <!-- ============================================================
      PAYMENT LINKS
      Stripe account is being created in Cape Town (week of 2026-09-28).
      Replace href="#" on each line below with the Stripe payment link.
-     Internal price ladder, ascending — only the strategy session price
-     is published on the page, per the current pricing rule. If that
-     rule changes, update BOTH the .p-tiers markup above AND the
-     hasOfferCatalog block in the JSON-LD in <head>.
+     Price ladder, ascending. The first three are published on the page.
+     To change any published price, update BOTH the .p-tiers markup
+     above AND the hasOfferCatalog block in the JSON-LD in <head>, on
+     this page AND on /presence/ — and the JSON-LD on all seven pages,
+     since every page carries the same offer catalogue.
 
        Strategy session ......... EUR   500   (published)
-       Founder Visual Audit ..... EUR 1,200   (on application)
-       The Build ................ EUR 3,500   (on application)
+       Founder Visual Audit ..... EUR 1,200   (published)
+       The Build ................ EUR 3,500   (published)
        Three-month engagement ... quoted       (on application)
        Retainer ................. quoted       (on application)
 
