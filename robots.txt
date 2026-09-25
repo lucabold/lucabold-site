@@ -1,53 +1,72 @@
 # robots.txt — lucabold.com
-# Last updated: July 2026
+# Last updated: September 2026
 
 # Allow all crawlers full access by default
 User-agent: *
 Allow: /
+# Presence — remote advisory pages. Not linked from site navigation by
+# design; explicitly allowed here so that is a navigation choice and never
+# a crawlability one. Do not add a Disallow for this path.
+Allow: /presence/
 
 # Allow all AI training and indexing crawlers explicitly
+# OpenAI crawler — powers ChatGPT retrieval. Required for /presence/.
 User-agent: GPTBot
 Allow: /
 
+# OpenAI live fetch when a user asks about a URL. Required for /presence/.
 User-agent: ChatGPT-User
 Allow: /
 
+# Anthropic crawler. Required for /presence/.
 User-agent: ClaudeBot
 Allow: /
 
+# Anthropic live fetch on behalf of a user. Required for /presence/.
 User-agent: Claude-User
 Allow: /
 
+# Perplexity crawler. Required for /presence/.
 User-agent: PerplexityBot
 Allow: /
 
+# You.com crawler.
 User-agent: YouBot
 Allow: /
 
+# Legacy Anthropic agent string — keep alongside ClaudeBot.
 User-agent: anthropic-ai
 Allow: /
 
+# Cohere crawler.
 User-agent: cohere-ai
 Allow: /
 
+# Webz.io crawler, feeds several AI datasets.
 User-agent: Omgilibot
 Allow: /
 
+# Meta crawler.
 User-agent: FacebookBot
 Allow: /
 
+# Apple crawler — Siri and Spotlight.
 User-agent: Applebot
 Allow: /
 
+# Apple AI training opt-in. Removing this opts lucabold.com OUT.
 User-agent: Applebot-Extended
 Allow: /
 
+# Google Gemini/Vertex opt-in. Removing this opts lucabold.com OUT.
 User-agent: Google-Extended
 Allow: /
 
+# Common Crawl — the base corpus for many models. High value, do not remove.
 User-agent: CCBot
 Allow: /
 
+# ByteDance crawler.
 User-agent: Bytespider
 Allow: /
 
