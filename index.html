@@ -2306,6 +2306,121 @@ section[id], footer[id] { scroll-margin-top: 104px; }
     margin-bottom: 8px !important;
   }
 }
+
+/* ---- BOOKING ROUTES: two territories, equal weight ---- */
+.booking-routes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--border);
+  margin-bottom: 36px;
+}
+
+.booking-route {
+  padding: 28px 0 30px;
+  border-bottom: 1px solid var(--border);
+}
+
+.booking-route:first-child { padding-right: 36px; }
+
+.booking-route + .booking-route {
+  border-left: 1px solid var(--border);
+  padding-left: 36px;
+}
+
+.booking-route-label {
+  font-size: 0.6875rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.booking-route-agency {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--cream);
+  margin-bottom: 12px;
+}
+
+.booking-route-role {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  margin-top: 6px;
+}
+
+.booking-route-contact {
+  font-size: 0.875rem;
+  line-height: 1.9;
+  color: var(--cream);
+  margin-bottom: 14px;
+}
+
+.booking-route-contact a {
+  color: var(--cream);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-gold);
+  transition: color 0.3s;
+}
+
+.booking-route-contact a:hover { color: var(--gold); }
+
+.booking-route-note {
+  font-size: 0.8125rem;
+  line-height: 1.75;
+  color: var(--cream-dim);
+  max-width: 44ch;
+  margin-bottom: 14px;
+}
+
+.booking-route-link a {
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.booking-route-link a:hover { color: var(--gold); }
+
+@media (max-width: 700px) {
+  .booking-routes { grid-template-columns: 1fr; }
+
+  .booking-route,
+  .booking-route:first-child,
+  .booking-route + .booking-route {
+    padding: 26px 0 28px;
+    border-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .booking-route-note { font-size: 0.875rem; line-height: 1.6; }
+  .booking-route-contact { font-size: 1rem; line-height: 1.7; }
+}
+
+/* These are the primary booking actions on a phone — give them real targets. */
+@media (max-width: 900px) {
+  .booking-route-contact a {
+    display: inline-block;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .booking-route-link a {
+    display: inline-block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .booking-route-contact { line-height: 1.4; }
+}
 </style>
 <link href="assets/favicon.ico" rel="icon" sizes="any"/>
 <link href="assets/favicon-lb.png" rel="icon" type="image/png"/>
@@ -2544,6 +2659,19 @@ section[id], footer[id] { scroll-margin-top: 104px; }
           "email": "cat.asiascout@gmail.com",
           "availableLanguage": "English",
           "areaServed": "Asia"
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "Booking enquiries — Europe",
+          "email": "office@mramodels.ro",
+          "telephone": "+40213079111",
+          "name": "MRA Models — Bucharest",
+          "availableLanguage": [
+            "English",
+            "Romanian"
+          ],
+          "areaServed": "EU",
+          "description": "Direct booking across the European Union. Luca Bold holds an Italian passport and has full work rights in all 27 EU member states — no visa, work permit or sponsorship required."
         }
       ],
       "affiliation": [
@@ -2574,11 +2702,20 @@ section[id], footer[id] { scroll-margin-top: 104px; }
       "@type": "Organization",
       "@id": "https://www.mra.ro/#mra-models",
       "name": "MRA Models",
+      "description": "European representation — Bucharest. Books Luca Bold directly for productions across the European Union.",
       "url": "https://www.mra.ro/en",
+      "areaServed": "EU",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Bucharest",
         "addressCountry": "RO"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Booking enquiries — Europe",
+        "email": "office@mramodels.ro",
+        "telephone": "+40213079111",
+        "areaServed": "EU"
       }
     },
     {
@@ -3074,7 +3211,7 @@ section[id], footer[id] { scroll-margin-top: 104px; }
           "name": "How do you book Luca Bold?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "All modelling enquiries go through ICE Models, Cape Town — mother agency, representing Luca Bold worldwide for campaign, TVC, commercial and runway work in every market. His booking agent is Raymond Weston — raymond@icemodels.co.za, +27 (0)82 777 3302. The Asia scouting desk is Cat — cat.asiascout@gmail.com. Enquiries about Booked or the Get Signed Accelerator are a separate business and go direct to Luca."
+            "text": "ICE Models, Cape Town is the mother agency, representing Luca Bold worldwide for campaign, TVC, commercial and runway work. His booking agent is Raymond Weston — raymond@icemodels.co.za, +27 (0)82 777 3302. For productions shooting in Europe he can be booked directly through MRA Models, Bucharest — office@mramodels.ro, +40 21 307 9111. The Asia scouting desk is Cat — cat.asiascout@gmail.com. Enquiries about Booked or the Get Signed Accelerator are a separate business and go direct to Luca."
           }
         }
       ]
@@ -3468,7 +3605,7 @@ document.documentElement.classList.add('js');
 </div>
 <div class="faq-item">
 <h3>How do you book him?</h3>
-<p>All modelling enquiries go through ICE Models, Cape Town — mother agency, representing him worldwide. His booking agent is Raymond Weston — <a href="mailto:raymond@icemodels.co.za">raymond@icemodels.co.za</a>, +27 (0)82 777 3302. The Asia scouting desk is Cat — <a href="mailto:cat.asiascout@gmail.com">cat.asiascout@gmail.com</a>. Enquiries about Booked or the Get Signed Accelerator are a separate business and go direct to Luca.</p>
+<p>ICE Models, Cape Town is the mother agency, representing him worldwide. His booking agent is Raymond Weston — <a href="mailto:raymond@icemodels.co.za">raymond@icemodels.co.za</a>, +27 (0)82 777 3302. For productions shooting in Europe he can be booked directly through MRA Models, Bucharest — <a href="mailto:office@mramodels.ro">office@mramodels.ro</a>, +40 21 307 9111. The Asia scouting desk is Cat — <a href="mailto:cat.asiascout@gmail.com">cat.asiascout@gmail.com</a>. Enquiries about Booked or the Get Signed Accelerator are a separate business and go direct to Luca.</p>
 </div>
 </div>
 </section>
@@ -3540,17 +3677,25 @@ document.documentElement.classList.add('js');
 <section aria-labelledby="booking-heading" class="section booking-section reveal" id="booking">
 <p class="section-label" id="booking-heading">Bookings</p>
 <div class="booking-inner">
-<h2>All modelling enquiries<br/>through <em>ICE Models.</em></h2>
-<p class="booking-lead">Luca Bold is represented worldwide by ICE Models, Cape Town — mother agency. Campaign, TVC, commercial and runway enquiries for every market are handled by the agency desk.</p>
+<h2>Booking enquiries<br/>by <em>territory.</em></h2>
+<p class="booking-lead">ICE Models, Cape Town is Luca Bold&rsquo;s mother agency and handles campaign, TVC, commercial and runway enquiries worldwide. For productions shooting in Europe, MRA Models, Bucharest books him directly.</p>
+<div class="booking-routes">
+<div class="booking-route">
+<p class="booking-route-label">Worldwide &amp; Southern Africa</p>
+<p class="booking-route-agency">ICE Models, Cape Town <span class="booking-route-role">— mother agency</span></p>
+<p class="booking-route-contact">Raymond Weston, Agent<br/><a href="mailto:raymond@icemodels.co.za">raymond@icemodels.co.za</a><br/><a href="tel:+27827773302">+27 (0)82 777 3302</a></p>
+<p class="booking-route-note">Local hire in the Western Cape, October 2026 – February 2027 — no travel, accommodation or per diem cost.</p>
+<p class="booking-route-link"><a href="https://www.icemodels.co.za/mainboard/men/1044447/luca-bold" rel="noopener" target="_blank">View mainboard profile →</a></p>
+</div>
+<div class="booking-route">
+<p class="booking-route-label">Europe</p>
+<p class="booking-route-agency">MRA Models, Bucharest <span class="booking-route-role">— direct booking across the EU</span></p>
+<p class="booking-route-contact"><a href="mailto:office@mramodels.ro">office@mramodels.ro</a><br/><a href="tel:+40213079111">+40 21 307 9111</a></p>
+<p class="booking-route-note">Italian passport: full work rights in all 27 EU member states. No visa, no work permit, no sponsorship required.</p>
+<p class="booking-route-link"><a href="https://www.mra.ro/en/models/men/212-luca" rel="noopener" target="_blank">View MRA profile →</a></p>
+</div>
+</div>
 <div class="booking-desk">
-<div class="booking-desk-row">
-<span class="booking-desk-label">Agency</span>
-<span class="booking-desk-value">ICE Models — Cape Town<br/><a href="https://www.icemodels.co.za/mainboard/men/1044447/luca-bold" rel="noopener" target="_blank">View mainboard profile →</a></span>
-</div>
-<div class="booking-desk-row">
-<span class="booking-desk-label">Booking agent</span>
-<span class="booking-desk-value">Raymond Weston, Agent — ICE Models<br/><a href="mailto:raymond@icemodels.co.za">raymond@icemodels.co.za</a><br/>+27 (0)82 777 3302</span>
-</div>
 <div class="booking-desk-row">
 <span class="booking-desk-label">Scouting desk — Asia</span>
 <span class="booking-desk-value">Cat, Asia Scout<br/><a href="mailto:cat.asiascout@gmail.com">cat.asiascout@gmail.com</a><br/><a href="https://www.instagram.com/cat_scouting" rel="noopener" target="_blank">@cat_scouting</a></span>
@@ -3635,5 +3780,6 @@ document.documentElement.classList.add('js');
 </script>
 
 
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d0d9b9e4f80d4c1ca0e7732d57947a91"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
