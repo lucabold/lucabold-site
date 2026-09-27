@@ -13,7 +13,7 @@
 <!-- AI crawler signals -->
 <meta content="index, follow" name="robots"/>
 <meta content="index, follow" name="googlebot"/>
-<meta content="Luca Bold is in Romania 9–30 September 2026, then Cape Town October 2026 – February 2027 for the Southern Hemisphere production season and is a local hire for any production shooting in the Western Cape — no travel, accommodation or per diem cost. International campaign and commercial model for advertising, TVC, luxury, automotive, grooming and corporate lifestyle work. Holds Italian (EU) and South African passports, so no work permit or visa sponsorship is required across the EU and EEA. Available worldwide." name="ai-description"/>
+<meta content="Luca Bold is in Romania 9–30 September 2026, then Cape Town October 2026 – February 2027 for the Southern Hemisphere production season and is a local hire for any production shooting in the Western Cape — local rates apply. International campaign and commercial model for advertising, TVC, luxury, automotive, grooming and corporate lifestyle work. Holds Italian (EU) and South African passports, so no work permit or visa sponsorship is required across the EU and EEA. Available worldwide." name="ai-description"/>
 <meta content="campaign model, commercial model, TVC model, model available Bucharest, model available Romania, model available Transylvania, model available in Cape Town, Cape Town production season model, local hire model South Africa, male model Western Cape, advertising model, luxury watch model, automotive model, grooming model, skincare model, corporate lifestyle model, male model, international model, EU passport model, model without work permit Europe, model available worldwide, Milan model, Shanghai model, Cape Town model" name="ai-keywords"/>
 <meta content="Luca Bold" name="author"/>
 
@@ -2315,6 +2315,27 @@ section[id], footer[id] { scroll-margin-top: 104px; }
   margin-bottom: 36px;
 }
 
+.booking-routes-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.booking-routes-3 .booking-route:not(:last-child) {
+  padding-right: 24px;
+}
+
+@media (max-width: 900px) {
+  .booking-routes-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-routes-3 .booking-route + .booking-route {
+    border-left: 0;
+    border-top: 1px solid var(--border);
+    padding-left: 0;
+    padding-top: 26px;
+  }
+}
+
 .booking-route {
   padding: 28px 0 30px;
   border-bottom: 1px solid var(--border);
@@ -2441,7 +2462,7 @@ section[id], footer[id] { scroll-margin-top: 104px; }
       "givenName": "Luca",
       "familyName": "Bold",
       "jobTitle": "International Campaign and Commercial Model",
-      "description": "Luca Bold is an international campaign and commercial model, in Romania 9–30 September 2026, then Cape Town from October 2026 to February 2027 for the full Southern Hemisphere production season — a local hire for any production shooting in the Western Cape, with no travel, accommodation or per diem cost. 10+ years of advertising, TVC and campaign work across eight markets — Milan, Shanghai, Cape Town, Hong Kong, Seoul, Bali, Mumbai and Istanbul. He holds both an Italian (EU) and a South African passport, so no work permit or visa sponsorship is required for productions anywhere in the EU or EEA. Active sectors include luxury watches, automotive, technology, grooming and skincare, corporate lifestyle and beverage. Founder of Booked.",
+      "description": "Luca Bold is an international campaign and commercial model, in Romania 9–30 September 2026, then Cape Town from October 2026 to February 2027 for the full Southern Hemisphere production season — a local hire for any production shooting in the Western Cape, on local rates. 10+ years of advertising, TVC and campaign work across eight markets — Milan, Shanghai, Cape Town, Hong Kong, Seoul, Bali, Mumbai and Istanbul. He holds both an Italian (EU) and a South African passport, so no work permit or visa sponsorship is required for productions anywhere in the EU or EEA. Active sectors include luxury watches, automotive, technology, grooming and skincare, corporate lifestyle and beverage. Founder of Booked.",
       "url": "https://www.lucabold.com/",
       "image": {
         "@type": "ImageObject",
@@ -2642,6 +2663,15 @@ section[id], footer[id] { scroll-margin-top: 104px; }
         }
       ],
       "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "Direct & brand enquiries",
+          "name": "Luca Bold",
+          "url": "https://wa.me/27637549122",
+          "availableLanguage": "English",
+          "areaServed": "Worldwide",
+          "description": "For brand partnerships, press and general enquiries that are not a modelling booking. Modelling bookings are handled by the agency for the relevant territory."
+        },
         {
           "@type": "ContactPoint",
           "contactType": "Booking enquiries",
@@ -2860,8 +2890,10 @@ section[id], footer[id] { scroll-margin-top: 104px; }
           "position": 6,
           "item": {
             "@type": "CreativeWork",
+            "@id": "https://www.lucabold.com/#credit-samsung-galaxy-watch",
             "name": "Samsung Galaxy Watch — TVC",
             "description": "Television commercial for the Samsung Galaxy Watch, shot on location in Cape Town, with the endline \u201cAll you need, always in reach\u201d. Luca Bold played the lead role.",
+            "url": "https://www.lucabold.com/case-study/",
             "contributor": {
               "@id": "https://www.lucabold.com/#luca-bold"
             },
@@ -3163,7 +3195,7 @@ section[id], footer[id] { scroll-margin-top: 104px; }
           "name": "Is Luca Bold available in Cape Town?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes — Luca Bold is in Cape Town from October 2026 to February 2027, the full Southern Hemisphere production season. Before that he is in Romania from 9 to 30 September 2026, available in Bucharest, Transylvania and nationwide. He is a local hire for any production shooting in the Western Cape, so there is no travel, accommodation or per diem cost. He also holds Italian (EU) and South African passports, so an international production booking him carries no work permit or visa lead time. Enquiries go through ICE Models, Cape Town."
+            "text": "Yes — Luca Bold is in Cape Town from October 2026 to February 2027, the full Southern Hemisphere production season. Before that he is in Romania from 9 to 30 September 2026, available in Bucharest, Transylvania and nationwide. He is a local hire for any production shooting in the Western Cape, on local rates. He also holds Italian (EU) and South African passports, so an international production booking him carries no work permit or visa lead time. Enquiries go through ICE Models, Cape Town."
           }
         },
         {
@@ -3261,10 +3293,9 @@ document.documentElement.classList.add('js');
 <a href="#work" onclick="closeMenu()">Work</a>
 <a href="#campaign-film" onclick="closeMenu()">Campaign</a>
 <a href="#portfolio" onclick="closeMenu()">Portfolio</a>
-<a href="#specs" onclick="closeMenu()">Specs</a>
+<a href="/for-casting-directors/" onclick="closeMenu()">For Casting Directors</a>
 <a href="#booking" onclick="closeMenu()">Bookings</a>
 <a href="#booked" onclick="closeMenu()">Booked</a>
-<a href="#accelerator" onclick="closeMenu()">Accelerator</a>
 <a href="#contact" onclick="closeMenu()">Contact</a>
 </div>
 <!-- NAV -->
@@ -3274,10 +3305,9 @@ document.documentElement.classList.add('js');
 <li><a class="nav-availability" href="#availability">Availability</a></li>
 <li><a href="#work">Work</a></li>
 <li><a href="#portfolio">Portfolio</a></li>
-<li><a href="#specs">Specs</a></li>
+<li><a href="/for-casting-directors/">For Casting Directors</a></li>
 <li><a href="#booking">Bookings</a></li>
 <li><a href="#booked">Booked</a></li>
-              <li><a href="#accelerator">Accelerator</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 <button aria-expanded="false" aria-label="Open menu" class="nav-hamburger" id="menuOpen">
@@ -3318,7 +3348,7 @@ document.documentElement.classList.add('js');
 <div class="availability-inner">
 <p class="availability-kicker" id="availability-heading">Currently booking</p>
 <h2 class="availability-title">Romania <em>9–30&nbsp;September&nbsp;2026</em><br/>then Cape Town <em>October&nbsp;2026 — February&nbsp;2027</em></h2>
-<p class="availability-copy">In Romania from 9 to 30 September 2026 — available for bookings in Bucharest, Transylvania and across the country, with EU work rights and no permit required. Then based in Cape Town for the full Southern Hemisphere production season. <strong>Local hire for any production shooting in the Western Cape</strong> — no flights, no accommodation, no per diems. Italian (EU) and South African passports, so international productions carry no permit or visa lead time either.</p>
+<p class="availability-copy">In Romania from 9 to 30 September 2026 — available for bookings in Bucharest, Transylvania and across the country, with EU work rights and no permit required. Then based in Cape Town for the full Southern Hemisphere production season. <strong>Local hire for any production shooting in the Western Cape</strong> — local rates apply. Italian (EU) and South African passports, so international productions carry no permit or visa lead time either.</p>
 <p class="availability-copy">Available for campaign stills, TVC and campaign film. Particularly suited to automotive, luxury watch, grooming, technology and corporate lifestyle briefs.</p>
 <a class="btn" href="#booking">
 <span>Booking details</span>
@@ -3343,7 +3373,7 @@ document.documentElement.classList.add('js');
 <div class="tier1-grid" role="list">
 <div class="tier1-item" role="listitem">
 <span class="tier1-brand">Patek Philippe</span>
-<span class="tier1-type">Cubitus Collection Launch — TVC (supporting) + Stills</span>
+<span class="tier1-type">Cubitus Collection Launch, 2024 — TVC (supporting) + Stills</span>
 </div>
 <div class="tier1-item" role="listitem">
 <span class="tier1-brand">Emporio Armani</span>
@@ -3362,14 +3392,14 @@ document.documentElement.classList.add('js');
 <div class="sector-block">
 <h3 class="sector-heading">Work by sector</h3>
 <dl class="sector-list">
-<div class="sector-row"><dt>Luxury watches</dt><dd>Patek Philippe — Cubitus Collection launch campaign, TVC (supporting role) and stills</dd></div>
+<div class="sector-row"><dt>Luxury watches</dt><dd>Patek Philippe — Cubitus Collection launch campaign, 2024, TVC (supporting role) and stills</dd></div>
 <div class="sector-row"><dt>Fragrance &amp; beauty</dt><dd>Chopard Cedar Malaki — fragrance feature, Dossier Magazine, Cape Town, 2025</dd></div>
-<div class="sector-row"><dt>Technology</dt><dd>Samsung Galaxy Watch — TVC, lead role, Cape Town</dd></div>
+<div class="sector-row"><dt>Technology</dt><dd>Samsung Galaxy Watch — TVC, lead role, Cape Town · <a href="/case-study/" style="color:var(--gold);text-decoration:none;border-bottom:1px solid var(--border-gold);">Read the case study →</a></dd></div>
 <div class="sector-row"><dt>Grooming &amp; skincare</dt><dd>Nivea Men — campaign film</dd></div>
 <div class="sector-row"><dt>Beverage</dt><dd>Budweiser China — TVC campaign</dd></div>
 <div class="sector-row"><dt>Formal tailoring</dt><dd>Louis Philippe, India — &ldquo;Ceremonial&rdquo; and &ldquo;Summer Luxury Weddings&rdquo; campaigns, 2023 · national retail and airport placement</dd></div>
 <div class="sector-row"><dt>Fashion &amp; apparel</dt><dd>Zolla — TVC, lead role, Cape Town · GANT — campaign, China, 2026 · Tommy Hilfiger — outdoor campaign · Calvin Klein — e-commerce · Emporio Armani — runway, Milan</dd></div>
-<div class="sector-row"><dt>Outdoor &amp; technical</dt><dd>Helly Hansen — seasonal campaign, China: H2EXPLORER and H2ESSENTIAL lines, stills and motion · Peak Performance — GORE-TEX outerwear campaign film</dd></div>
+<div class="sector-row"><dt>Outdoor &amp; technical</dt><dd>Helly Hansen — seasonal campaign, China, 2025: H2EXPLORER and H2ESSENTIAL lines, stills and motion · Peak Performance — GORE-TEX outerwear campaign film</dd></div>
 <div class="sector-row"><dt>Footwear</dt><dd>ROHDE — European campaign</dd></div>
 <div class="sector-row"><dt>Editorial &amp; press</dt><dd>Forbes Magazine — South Korea, 2018 · Vogue — runway</dd></div>
 <div class="sector-row"><dt>Luxury brand events</dt><dd>Louis Vuitton · Chanel · Ralph Lauren</dd></div>
@@ -3498,8 +3528,8 @@ document.documentElement.classList.add('js');
 <div class="stat-label">Global Markets</div>
 </div>
 <div class="stat-box" role="listitem">
-<div class="stat-number">Selected</div>
-<div class="stat-label">Credits</div>
+<div class="stat-number">20</div>
+<div class="stat-label">Campaign Credits</div>
 </div>
 <div class="stat-box" role="listitem">
 <div class="stat-number">7</div>
@@ -3508,34 +3538,14 @@ document.documentElement.classList.add('js');
 </div>
 </div>
 </section>
-<!-- SPECIFICATIONS & AVAILABILITY -->
+<!-- SPECIFICATIONS & AVAILABILITY (teaser — full detail lives at /for-casting-directors/) -->
 <section aria-labelledby="specs-heading" class="section reveal" id="specs">
 <p class="section-label" id="specs-heading">Specifications &amp; Availability</p>
-<div class="specs-grid">
-<div class="specs-col">
-<h3 class="specs-title">Measurements</h3>
-<dl class="specs-list">
-<div class="specs-row"><dt>Height</dt><dd>188 cm / 6&#39;2&quot;</dd></div>
-<div class="specs-row"><dt>Chest</dt><dd>97 cm / 38&quot;</dd></div>
-<div class="specs-row"><dt>Waist</dt><dd>74 cm / 29&quot;</dd></div>
-<div class="specs-row"><dt>Collar</dt><dd>38 cm / 15&quot;</dd></div>
-<div class="specs-row"><dt>Suit</dt><dd>EU 48 / UK–US 38</dd></div>
-<div class="specs-row"><dt>Shoe</dt><dd>EU 44 / UK 9.5 / US 10</dd></div>
-<div class="specs-row"><dt>Hair</dt><dd>Brown</dd></div>
-<div class="specs-row"><dt>Eyes</dt><dd>Brown</dd></div>
-</dl>
-</div>
-<div class="specs-col">
-<h3 class="specs-title">Work eligibility</h3>
-<p class="specs-lead">Italian and South African passports.</p>
-<p class="specs-body">The Italian passport carries EU citizenship — the right to live and work in all 27 EU member states and the EEA. For a production in Milan, Paris, Berlin or Amsterdam that means <strong>no work permit, no sponsorship cost and no visa lead time</strong>. The South African passport covers work across Southern Africa.</p>
-<p class="specs-body">Ten years of resident working experience across Asia, including Shanghai, Hong Kong, Seoul, Mumbai and Bali.</p>
-<h3 class="specs-title specs-title-second">Availability</h3>
-<p class="specs-body"><strong>Romania, 9–30 September 2026, then Cape Town, October 2026 to February 2027.</strong> Local hire in the Western Cape for the full season — a production shooting there carries no travel, accommodation or per diem cost for him. Available for travel to other markets during the period by arrangement.</p>
-<h3 class="specs-title specs-title-second">Fees &amp; usage</h3>
-<p class="specs-body">Shoot fee and image licence are quoted separately. Usage is priced against territory, media and term. Send the brief with territories, media and licence period to the agency desk and a quote follows.</p>
-</div>
-</div>
+<p class="specs-lead">Measurements, work eligibility, fees and the full booking terms are on a dedicated page for casting directors and producers.</p>
+<a class="btn" href="/for-casting-directors/">
+<span>View full specs &amp; availability</span>
+<span aria-hidden="true" class="btn-arrow">→</span>
+</a>
 </section>
 <!-- AGENCIES -->
 <section aria-labelledby="rep-heading" class="section reveal" id="agencies">
@@ -3585,7 +3595,7 @@ document.documentElement.classList.add('js');
 <div class="faq-list">
 <div class="faq-item">
 <h3>Is Luca Bold available in Cape Town?</h3>
-<p><strong>Yes — Cape Town from October 2026 to February 2027</strong>, the full Southern Hemisphere production season. Before that he is in Romania from 9 to 30 September 2026. He is a local hire for any production shooting in the Western Cape, so there is no travel, accommodation or per diem cost. He also holds Italian (EU) and South African passports, so an international production booking him carries no permit or visa lead time. Enquiries through ICE Models, Cape Town.</p>
+<p><strong>Yes — Cape Town from October 2026 to February 2027</strong>, the full Southern Hemisphere production season. Before that he is in Romania from 9 to 30 September 2026. He is a local hire for any production shooting in the Western Cape, on local rates. He also holds Italian (EU) and South African passports, so an international production booking him carries no permit or visa lead time. Enquiries through ICE Models, Cape Town.</p>
 </div>
 <div class="faq-item">
 <h3>Does Luca Bold require a work permit or visa sponsorship?</h3>
@@ -3626,50 +3636,7 @@ document.documentElement.classList.add('js');
 <span>Visit Booked</span>
 <span aria-hidden="true" class="btn-arrow">→</span>
 </a>
-</div>
-</section>
-<!-- ACCELERATOR -->
-<section aria-labelledby="accelerator-heading" class="section accelerator-section reveal" id="accelerator">
-<div aria-hidden="true" class="accelerator-bg-text">GET SIGNED.</div>
-<div class="accelerator-inner">
-  <p class="section-label" id="accelerator-heading">The Get Signed Accelerator</p>
-  <h2>Four weeks.<br/>Made industry-<em>readable.</em></h2>
-  <p>Built for working models who aren't booking at their level. Your portfolio, your digital presence, your booking path — assessed and rebuilt from the inside out.</p>
-  <p>This is not a course. It is a structured process with a defined outcome, built on a decade of first-hand industry experience across seven global markets.</p>
-  <div class="accelerator-weeks" role="list">
-    <div class="accelerator-week" role="listitem">
-      <span class="week-num">01</span>
-      <div class="week-content">
-        <div class="week-title">Diagnosis</div>
-        <div class="week-desc">Full Scan audit. Portfolio sequencing review. Agency gaps mapped. You see exactly what's holding you back.</div>
-      </div>
-    </div>
-    <div class="accelerator-week" role="listitem">
-      <span class="week-num">02</span>
-      <div class="week-content">
-        <div class="week-title">Infrastructure</div>
-        <div class="week-desc">Bio rewrite. Portfolio sequencing fixed. Contact friction removed. What needs to exist — built or briefed.</div>
-      </div>
-    </div>
-    <div class="accelerator-week" role="listitem">
-      <span class="week-num">03</span>
-      <div class="week-content">
-        <div class="week-title">Positioning</div>
-        <div class="week-desc">Market category clarified. Agency outreach list built. One clear positioning line — usable everywhere.</div>
-      </div>
-    </div>
-    <div class="accelerator-week" role="listitem">
-      <span class="week-num">04</span>
-      <div class="week-content">
-        <div class="week-title">Activation</div>
-        <div class="week-desc">Outreach sent. Follow-up sequence drafted. Instagram and RedNote updated. Measurable output by end of week four.</div>
-      </div>
-    </div>
-  </div>
-  <a aria-label="Join the Get Signed Accelerator waitlist via WhatsApp" class="btn" href="https://wa.me/27637549122?text=Hi%20Luca%20%E2%80%94%20I%27m%20interested%20in%20the%20Get%20Signed%20Accelerator.%0A%0AName%3A%0AInstagram%3A%0AMarket%20(city)%3A" rel="noopener" target="_blank">
-    <span>Join the Waitlist</span>
-    <span aria-hidden="true" class="btn-arrow">→</span>
-  </a>
+<p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.875rem;line-height:1.7;color:var(--cream-dim);max-width:60ch;margin-top:24px;">Also runs the Get Signed Accelerator, a four-week programme for working models — details on <a href="https://www.bookednow.co.za" rel="noopener" target="_blank" style="color:var(--gold);text-decoration:none;border-bottom:1px solid var(--border-gold);">Booked</a>.</p>
 </div>
 </section>
 <!-- FOOTER -->
@@ -3677,14 +3644,20 @@ document.documentElement.classList.add('js');
 <section aria-labelledby="booking-heading" class="section booking-section reveal" id="booking">
 <p class="section-label" id="booking-heading">Bookings</p>
 <div class="booking-inner">
-<h2>Booking enquiries<br/>by <em>territory.</em></h2>
-<p class="booking-lead">ICE Models, Cape Town is Luca Bold&rsquo;s mother agency and handles campaign, TVC, commercial and runway enquiries worldwide. For productions shooting in Europe, MRA Models, Bucharest books him directly.</p>
-<div class="booking-routes">
+<h2>How to reach <em>me.</em></h2>
+<p class="booking-lead">Direct enquiries — brand partnerships, press, general questions — come straight to Luca. Modelling bookings go through the agency for your territory: ICE Models worldwide and across Southern Africa, MRA Models direct for Europe.</p>
+<div class="booking-routes booking-routes-3">
+<div class="booking-route">
+<p class="booking-route-label">Direct</p>
+<p class="booking-route-agency">Luca Bold <span class="booking-route-role">— brand, press &amp; general enquiries</span></p>
+<p class="booking-route-contact"><a href="https://wa.me/27637549122" rel="noopener" target="_blank">WhatsApp</a></p>
+<p class="booking-route-note">For anything that isn&rsquo;t a modelling booking &mdash; modelling work goes through the agency.</p>
+</div>
 <div class="booking-route">
 <p class="booking-route-label">Worldwide &amp; Southern Africa</p>
 <p class="booking-route-agency">ICE Models, Cape Town <span class="booking-route-role">— mother agency</span></p>
 <p class="booking-route-contact">Raymond Weston, Agent<br/><a href="mailto:raymond@icemodels.co.za">raymond@icemodels.co.za</a><br/><a href="tel:+27827773302">+27 (0)82 777 3302</a></p>
-<p class="booking-route-note">Local hire in the Western Cape, October 2026 – February 2027 — no travel, accommodation or per diem cost.</p>
+<p class="booking-route-note">Local hire in the Western Cape, October 2026 – February 2027 — local rates apply.</p>
 <p class="booking-route-link"><a href="https://www.icemodels.co.za/mainboard/men/1044447/luca-bold" rel="noopener" target="_blank">View mainboard profile →</a></p>
 </div>
 <div class="booking-route">
@@ -3705,7 +3678,7 @@ document.documentElement.classList.add('js');
 <span class="booking-desk-value">Send territories, media and licence period with the brief and a quote follows. Shoot fee and image licence are quoted separately.</span>
 </div>
 </div>
-<p class="booking-note">Booked — the infrastructure company — is a separate business. Enquiries about Booked or the Get Signed Accelerator go direct to Luca.</p>
+<p class="booking-note">Booked, the discoverability infrastructure company, is a separate business — also reached via the Direct contact above.</p>
 </div>
 </section>
 <!-- DIRECT CONTACT LINKS -->
