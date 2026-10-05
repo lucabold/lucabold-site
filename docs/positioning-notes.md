@@ -60,20 +60,25 @@ The homepage is overwhelmingly BRAND after the Sep 28 restructure. The only MIXE
 These are all appropriate as cross-links once /booked/ exists as a standalone route. No content blocks are actively serving two audiences in a way that confuses either.
 
 
-## Undated credits — supply years
+## Undated credits — complete list
 
-These eight credits have no year anywhere in the codebase. I need the year for each:
+Every CreativeWork node in the JSON-LD that has no `datePublished`, across all pages. Supply the year for each:
 
-1. **Samsung Galaxy Watch** — TVC, lead role, Cape Town
-2. **Nivea Men** — campaign film
-3. **Budweiser China** — TVC campaign
-4. **Zolla** — TVC, lead male role, Cape Town
-5. **Tommy Hilfiger** — outdoor campaign
-6. **Calvin Klein** — e-commerce
-7. **ROHDE** — European campaign
-8. **Peak Performance** — GORE-TEX outerwear campaign film
+- [ ] **Samsung Galaxy Watch** — TVC, lead role, Cape Town (homepage + case-study)
+- [ ] **Nivea Men** — campaign film (homepage)
+- [ ] **Budweiser China** — TVC campaign (homepage)
+- [ ] **Zolla** — TVC, lead male role, Cape Town (homepage)
+- [ ] **Tommy Hilfiger** — outdoor campaign (homepage)
+- [ ] **Calvin Klein** — e-commerce (homepage)
+- [ ] **ROHDE** — European campaign (homepage)
+- [ ] **Peak Performance** — GORE-TEX outerwear campaign film (homepage)
+- [ ] **Emporio Armani** — Milan runway (homepage)
+- [ ] **Vogue** — runway (homepage)
+- [ ] **Louis Vuitton** — brand event (homepage)
+- [ ] **Chanel** — brand event (homepage)
+- [ ] **Ralph Lauren** — brand activation (homepage)
 
-Once you supply the years, I will add them to the sector list, the JSON-LD CreativeWork entries, and the llms.txt credits.
+13 total. Once supplied, I will add `datePublished` to the JSON-LD CreativeWork nodes and the llms.txt credits.
 
 
 ## What is actively costing perceived tier
