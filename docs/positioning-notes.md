@@ -87,3 +87,8 @@ Once you supply the years, I will add them to the sector list, the JSON-LD Creat
 4. **Seven undated credits** make the strongest brands (Samsung, Nivea, Budweiser) look like they might be old work. Dating them would signal recency. Leaving them undated signals that you're not sure when they happened.
 
 5. **"Also builds Booked."** as a heading is self-deprecating. "Also" positions Booked as a side project. When /booked/ exists as its own route, the homepage mention should be a plain founder credit, not a section heading.
+
+
+## Pending actions
+
+1. **bookednow.co.za → lucabold.com/booked/ 301 redirect** — Luca to implement at DNS/host level. All on-site links already repointed to /booked/. Once the redirect is live, bookednow.co.za becomes a redirect-only domain with no independent content.

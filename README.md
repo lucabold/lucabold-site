@@ -58,4 +58,4 @@ The facts on this site must match the agency profiles linked in `sameAs` (ICE Mo
 
 Luca Bold is also the founder of Booked — a discoverability infrastructure company for fashion creatives.
 
-https://www.bookednow.co.za
+https://www.lucabold.com/booked/

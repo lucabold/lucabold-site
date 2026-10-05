@@ -25,4 +25,4 @@ and large language model recommendation systems.
 Booked is a discoverability infrastructure company for fashion creatives.
 If your digital presence is invisible to AI systems and casting platforms,
 Booked builds the fix.
-https://www.bookednow.co.za
+https://www.lucabold.com/booked/
